@@ -69,7 +69,7 @@ export const CTAButton = ({
       )}
       <motion.div className="flex justify-center" variants={fadeInUp}>
         <a
-          href="https://chrome.google.com/webstore"
+          href="https://chromewebstore.google.com/detail/x-bot-cleaner/noehdijpennlbfmaohlhdhhjgdjmofjl"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block transition-transform hover:scale-105 active:scale-95 scale-[0.75] sm:scale-100"
