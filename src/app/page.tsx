@@ -5,7 +5,18 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { CTAButton } from "@/components/CTAButton";
-import { Shield, Zap, Smartphone, Eye } from "lucide-react";
+import {
+  Shield,
+  Target,
+  Download,
+  MoveHorizontal,
+  Trash2,
+  Filter,
+  BarChart,
+  Users,
+  CheckCircle,
+  XCircle,
+} from "lucide-react";
 import { useScrollTracking } from "@/lib/analytics";
 
 const fadeInUp = {
@@ -39,12 +50,12 @@ export default function Home() {
           >
             <Image
               src="/images/logo.png"
-              alt="QR Engine Logo"
+              alt="X Bot Cleaner Logo"
               width={32}
               height={32}
               className="rounded-lg"
             />
-            <span className="font-semibold text-xl">QR Engine</span>
+            <span className="font-semibold text-xl">X Bot Cleaner</span>
           </motion.div>
           <ThemeToggle />
         </div>
@@ -68,7 +79,7 @@ export default function Home() {
             >
               <Image
                 src="/images/logo.png"
-                alt="QR Engine Logo - Professional QR Scanner & Generator for iOS"
+                alt="X Bot Cleaner Logo - Manual Bot Follower Removal Tool for X (Twitter)"
                 width={120}
                 height={120}
                 className="rounded-3xl"
@@ -80,21 +91,21 @@ export default function Home() {
               className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-foreground to-foreground/70 bg-clip-text text-transparent mb-6"
               variants={fadeInUp}
             >
-              Instant QR Detection
+              Take Control of Your X Followers
             </motion.h1>
             <motion.p
               className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto"
               variants={fadeInUp}
             >
-              Point & Scan in Real-Time
+              Manually identify and bulk remove bot followers
             </motion.p>
             <motion.p
               className="text-lg text-muted-foreground/80 mb-12 max-w-3xl mx-auto"
               variants={fadeInUp}
             >
-              Transform your iPhone into a powerful QR code tool. Privacy-first,
-              lightning-fast, and beautifully designed for the modern iOS
-              experience.
+              X Bot Cleaner helps you take control of your X (Twitter) follower
+              list by providing powerful tools to manually classify and remove
+              bot accounts while protecting your legitimate followers.
             </motion.p>
 
             {/* Hero CTA */}
@@ -117,47 +128,57 @@ export default function Home() {
             viewport={{ once: true }}
           >
             <h2 id="features-heading" className="sr-only">
-              QR Engine Features
+              X Bot Cleaner Features
             </h2>
 
-            {/* First Image - Scanner */}
+            {/* First Image - Manual Bot Classification */}
             <motion.article
               className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
               <div className="flex-1 space-y-6">
                 <header className="flex items-center gap-3">
-                  <Zap className="w-8 h-8 text-blue-500" aria-hidden="true" />
+                  <Target
+                    className="w-8 h-8 text-blue-500"
+                    aria-hidden="true"
+                  />
                   <h3 className="text-3xl md:text-4xl font-bold">
-                    Instant QR Detection
+                    Manual Bot Classification
                   </h3>
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Lightning-fast recognition with advanced camera technology.
-                  Smart detection for URLs, text, and contact information with
-                  built-in flashlight support.
+                  Manually mark followers as "Real" or "Bot" with dedicated
+                  buttons. Visual color coding helps you quickly identify and
+                  organize your follower list.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
-                    <div
-                      className="w-2 h-2 bg-green-500 rounded-full"
+                    <CheckCircle
+                      className="w-4 h-4 text-green-500"
                       aria-hidden="true"
-                    ></div>
-                    Real-time processing
+                    />
+                    Mark as Real (green)
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <XCircle
+                      className="w-4 h-4 text-red-500"
+                      aria-hidden="true"
+                    />
+                    Mark as Bot (red)
                   </li>
                   <li className="flex items-center gap-2">
                     <div
-                      className="w-2 h-2 bg-green-500 rounded-full"
+                      className="w-2 h-2 bg-blue-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Elegant glass design
+                    Persistent classifications
                   </li>
                 </ul>
               </div>
               <div className="flex-1 max-w-md">
                 <Image
                   src="/images/1.png"
-                  alt="QR Scanner Interface showing real-time QR code detection with elegant glass design"
+                  alt="Manual Bot Classification Interface showing Real and Bot buttons with color coding"
                   width={400}
                   height={800}
                   className="rounded-3xl"
@@ -166,25 +187,25 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Second Image - Generator */}
+            {/* Second Image - Follower Capture */}
             <motion.article
               className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
               <div className="flex-1 space-y-6">
                 <header className="flex items-center gap-3">
-                  <Smartphone
+                  <Download
                     className="w-8 h-8 text-purple-500"
                     aria-hidden="true"
                   />
                   <h3 className="text-3xl md:text-4xl font-bold">
-                    Create QR Codes Instantly
+                    Follower Capture
                   </h3>
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Professional quality generation with website URLs, text
-                  content, and contact cards. Live preview as you type for
-                  instant feedback.
+                  Automatically capture and save all follower profiles. Smart
+                  scrolling through your entire followers list stores profile
+                  data locally.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
@@ -192,21 +213,28 @@ export default function Home() {
                       className="w-2 h-2 bg-purple-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Multiple content types
+                    Auto-scroll capture
                   </li>
                   <li className="flex items-center gap-2">
                     <div
                       className="w-2 h-2 bg-purple-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Live preview updates
+                    Profile data storage
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div
+                      className="w-2 h-2 bg-purple-500 rounded-full"
+                      aria-hidden="true"
+                    ></div>
+                    Username, bio, verification
                   </li>
                 </ul>
               </div>
               <div className="flex-1 max-w-md">
                 <Image
                   src="/images/2.png"
-                  alt="QR Generator Interface showing professional quality QR code creation with live preview"
+                  alt="Follower Capture Interface showing automatic follower profile capture and storage"
                   width={400}
                   height={800}
                   className="rounded-3xl"
@@ -214,21 +242,25 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Third Image - Preview & Actions */}
+            {/* Third Image - Swipe-Based Review */}
             <motion.article
               className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
               <div className="flex-1 space-y-6">
                 <header className="flex items-center gap-3">
-                  <Eye className="w-8 h-8 text-green-500" aria-hidden="true" />
+                  <MoveHorizontal
+                    className="w-8 h-8 text-green-500"
+                    aria-hidden="true"
+                  />
                   <h3 className="text-3xl md:text-4xl font-bold">
-                    Save, Share & Use Anywhere
+                    Swipe-Based Review
                   </h3>
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  High-quality vector output powered by CoreImage. Save to
-                  Photos, share instantly via any app, or copy for quick access.
+                  Review captured followers with an intuitive swipe interface.
+                  Swipe right for "Real", swipe left for "Bot". Process
+                  followers in batches for efficient review.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
@@ -236,21 +268,28 @@ export default function Home() {
                       className="w-2 h-2 bg-green-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Crystal clear graphics
+                    Intuitive swipe gestures
                   </li>
                   <li className="flex items-center gap-2">
                     <div
                       className="w-2 h-2 bg-green-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Universal sharing
+                    Batch processing
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div
+                      className="w-2 h-2 bg-green-500 rounded-full"
+                      aria-hidden="true"
+                    ></div>
+                    Undo support
                   </li>
                 </ul>
               </div>
               <div className="flex-1 max-w-md">
                 <Image
                   src="/images/3.png"
-                  alt="QR Code Preview and Actions showing high-quality vector output and sharing options"
+                  alt="Swipe-Based Review Interface showing intuitive swipe gestures for classifying followers"
                   width={400}
                   height={800}
                   className="rounded-3xl"
@@ -258,47 +297,55 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Fourth Image - Smart Recognition */}
+            {/* Fourth Image - Bulk Removal & Smart Filters */}
             <motion.article
               className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
               <div className="flex-1 space-y-6">
                 <header className="flex items-center gap-3">
-                  <Shield
+                  <Trash2
                     className="w-8 h-8 text-orange-500"
                     aria-hidden="true"
                   />
                   <h3 className="text-3xl md:text-4xl font-bold">
-                    Smart Content Recognition
+                    Bulk Removal & Smart Filters
                   </h3>
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  One-tap actions ready for every content type. Direct link
-                  opening, content copying, and contact import straight to your
-                  address book.
+                  Remove all bot-marked followers with one click. Real-time
+                  progress tracking with automatic rate limit protection. Use
+                  smart filters to hide/show real followers, verified accounts,
+                  or focus on unclassified accounts.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
-                    <div
-                      className="w-2 h-2 bg-orange-500 rounded-full"
+                    <Filter
+                      className="w-4 h-4 text-orange-500"
                       aria-hidden="true"
-                    ></div>
-                    Context-aware actions
+                    />
+                    Smart filtering options
                   </li>
                   <li className="flex items-center gap-2">
                     <div
                       className="w-2 h-2 bg-orange-500 rounded-full"
                       aria-hidden="true"
                     ></div>
-                    Instant responses
+                    Progress tracking
+                  </li>
+                  <li className="flex items-center gap-2">
+                    <div
+                      className="w-2 h-2 bg-orange-500 rounded-full"
+                      aria-hidden="true"
+                    ></div>
+                    Rate limit protection
                   </li>
                 </ul>
               </div>
               <div className="flex-1 max-w-md">
                 <Image
                   src="/images/4.png"
-                  alt="Smart Content Recognition showing context-aware actions and instant responses"
+                  alt="Bulk Removal Interface showing smart filters and progress tracking for removing bot followers"
                   width={400}
                   height={800}
                   className="rounded-3xl"
@@ -327,12 +374,12 @@ export default function Home() {
               id="privacy-heading"
               className="text-3xl md:text-4xl font-bold mb-6"
             >
-              Your Privacy is Our Priority
+              Privacy-First Design
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              100% offline functionality. No data collection, no tracking, no
-              cloud storage. Everything happens on your device and stays on your
-              device.
+              100% local processing - no external servers. No tracking or
+              analytics. Data stored locally in your browser. Optional Chrome
+              sync support for your classifications.
             </p>
             <div className="grid md:grid-cols-3 gap-6 text-center">
               <article className="space-y-3">
@@ -344,7 +391,7 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold">Local Processing</h3>
                 <p className="text-sm text-muted-foreground">
-                  All scanning happens on your device
+                  All processing happens locally in your browser
                 </p>
               </article>
               <article className="space-y-3">
@@ -356,19 +403,20 @@ export default function Home() {
                 </div>
                 <h3 className="font-semibold">Zero Tracking</h3>
                 <p className="text-sm text-muted-foreground">
-                  No analytics or data collection
+                  No tracking or analytics
                 </p>
               </article>
               <article className="space-y-3">
                 <div className="w-12 h-12 bg-purple-500/10 rounded-full flex items-center justify-center mx-auto">
-                  <Shield
+                  <BarChart
                     className="w-6 h-6 text-purple-500"
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className="font-semibold">Offline First</h3>
+                <h3 className="font-semibold">Live Metrics</h3>
                 <p className="text-sm text-muted-foreground">
-                  Works without internet connection
+                  Track trusted followers, flagged bots, and classification
+                  coverage
                 </p>
               </article>
             </div>
@@ -392,15 +440,15 @@ export default function Home() {
               <div className="flex items-center space-x-3">
                 <Image
                   src="/images/logo.png"
-                  alt="QR Engine Logo"
+                  alt="X Bot Cleaner Logo"
                   width={24}
                   height={24}
                   className="rounded"
                 />
-                <span className="font-semibold">QR Engine</span>
+                <span className="font-semibold">X Bot Cleaner</span>
               </div>
               <p className="text-sm text-muted-foreground">
-                Professional QR solutions for iOS
+                Manual bot follower removal tool for X (Twitter)
               </p>
               <p className="text-sm text-muted-foreground">
                 Built with ❤️ by Ibrahim Uzun
@@ -445,7 +493,13 @@ export default function Home() {
 
           <div className="border-t border-border/40 mt-8 pt-8 text-center">
             <p className="text-sm text-muted-foreground">
-              © 2025 QR Engine. All rights reserved.
+              © 2025 X Bot Cleaner. All rights reserved.
+            </p>
+            <p className="text-xs text-muted-foreground mt-2">
+              This extension automates interactions with X/Twitter's interface.
+              Use responsibly and in accordance with X/Twitter's Terms of
+              Service. Always review accounts before marking them as bots. Bulk
+              removal operations cannot be undone.
             </p>
           </div>
         </div>

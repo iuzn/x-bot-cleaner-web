@@ -33,12 +33,12 @@ export default function PrivacyPolicy() {
             <div className="flex items-center space-x-3">
               <Image
                 src="/images/logo.png"
-                alt="QR Engine Logo"
+                alt="X Bot Cleaner Logo"
                 width={32}
                 height={32}
                 className="rounded-lg"
               />
-              <span className="font-semibold text-xl">QR Engine</span>
+              <span className="font-semibold text-xl">X Bot Cleaner</span>
             </div>
           </motion.div>
           <ThemeToggle />
@@ -66,7 +66,7 @@ export default function PrivacyPolicy() {
               Privacy Policy
             </h1>
             <p className="text-xl text-muted-foreground">
-              Your privacy is fundamental to how QR Engine operates
+              Your privacy is fundamental to how X Bot Cleaner operates
             </p>
           </motion.div>
 
@@ -80,9 +80,10 @@ export default function PrivacyPolicy() {
                 🔒 Privacy-First Promise
               </h2>
               <p className="text-lg leading-relaxed">
-                QR Engine is designed with privacy as its foundation. Unlike
-                other QR apps, we believe your data should stay on your device,
-                always.
+                X Bot Cleaner is designed with privacy as its foundation. Unlike
+                other extensions, we believe your data should stay in your browser,
+                always. All processing happens locally - no external servers, no
+                tracking, no analytics.
               </p>
             </div>
 
@@ -102,10 +103,11 @@ export default function PrivacyPolicy() {
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-xl font-semibold mb-3 text-red-600 dark:text-red-400">
-                    ❌ No QR Content
+                    ❌ No Follower Data Transmission
                   </h3>
                   <p className="text-muted-foreground">
-                    QR codes you scan or generate never leave your device.
+                    Follower profiles and classifications never leave your browser.
+                    All data is stored locally.
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
@@ -129,27 +131,29 @@ export default function PrivacyPolicy() {
             </motion.section>
 
             <motion.section className="mb-12" variants={fadeInUp}>
-              <h2 className="text-3xl font-bold mb-6">How QR Engine Works</h2>
+              <h2 className="text-3xl font-bold mb-6">How X Bot Cleaner Works</h2>
               <div className="space-y-6">
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">
-                    📱 100% Local Processing
+                    🌐 100% Local Processing
                   </h3>
                   <p className="leading-relaxed">
-                    All QR code scanning and generation happens directly on your
-                    iPhone using Apple&apos;s native frameworks (AVFoundation
-                    for scanning, CoreImage for generation). No internet
-                    connection is required or used for these core functions.
+                    All follower data capture, classification, and removal operations
+                    happen directly in your browser using Chrome&apos;s extension
+                    APIs. No external servers are involved in processing your
+                    follower data. The extension only interacts with X/Twitter&apos;s
+                    interface to automate manual actions you would perform yourself.
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-xl font-semibold mb-3 text-blue-600 dark:text-blue-400">
-                    🔒 No Cloud Storage
+                    🔒 Browser Local Storage
                   </h3>
                   <p className="leading-relaxed">
-                    Your QR codes, scan history, and generated content are
-                    stored only in your device&apos;s local storage. Nothing is
-                    uploaded to any servers or cloud services.
+                    Your follower profiles, classifications (Real/Bot), and metrics
+                    are stored only in your browser&apos;s local storage or Chrome
+                    sync storage (if enabled). Nothing is uploaded to any external
+                    servers or cloud services. You have full control over your data.
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
@@ -157,9 +161,10 @@ export default function PrivacyPolicy() {
                     🚫 No Third-Party Tracking
                   </h3>
                   <p className="leading-relaxed">
-                    QR Engine doesn&apos;t include any third-party analytics,
-                    advertising, or tracking SDKs. We don&apos;t use Google
-                    Analytics, Facebook SDK, or any similar services.
+                    X Bot Cleaner doesn&apos;t include any third-party analytics,
+                    advertising, or tracking libraries. We don&apos;t use Google
+                    Analytics, Facebook SDK, or any similar services. The extension
+                    operates completely independently.
                   </p>
                 </div>
               </div>
@@ -172,30 +177,36 @@ export default function PrivacyPolicy() {
               <div className="space-y-4">
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2">
-                    📷 Camera Access
+                    🌐 Access to X/Twitter Website
                   </h3>
                   <p className="text-muted-foreground">
-                    Required for QR code scanning. Camera input is processed
-                    locally in real-time and never stored or transmitted.
+                    Required to access your X/Twitter followers list and perform
+                    automated actions (scrolling, capturing profiles, removing
+                    followers). The extension only works on x.com and twitter.com
+                    domains. This permission is necessary for the core functionality
+                    of the extension.
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2">
-                    📱 Photos Access (Optional)
+                    💾 Storage Access
                   </h3>
                   <p className="text-muted-foreground">
-                    Only requested when you choose to save generated QR codes to
-                    your Photos library. We don&apos;t access existing photos.
+                    Used to store your follower data, classifications, and metrics
+                    locally in your browser. Data is stored using Chrome&apos;s
+                    storage API and never transmitted externally. Optional Chrome
+                    sync can be enabled to sync your classifications across devices.
                   </p>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2">
-                    👤 Contacts Access (Optional)
+                    🔄 Active Tab Access
                   </h3>
                   <p className="text-muted-foreground">
-                    Only requested when you choose to create QR codes from
-                    contact information or save scanned contact cards to your
-                    address book.
+                    Required to interact with X/Twitter&apos;s interface when you
+                    activate the extension. The extension only accesses tabs when
+                    you explicitly use its features. It doesn&apos;t monitor or
+                    track your browsing activity.
                   </p>
                 </div>
               </div>
@@ -205,21 +216,21 @@ export default function PrivacyPolicy() {
               <h2 className="text-3xl font-bold mb-6">About the Developer</h2>
               <div className="bg-card border border-border rounded-lg p-6">
                 <p className="leading-relaxed mb-4">
-                  QR Engine is developed by <strong>Ibrahim Uzun</strong>, an
-                  individual iOS developer based in Istanbul, Turkey. This is
+                  X Bot Cleaner is developed by <strong>Ibrahim Uzun</strong>, an
+                  individual developer based in Istanbul, Turkey. This is
                   not a corporate product with complex privacy policies and data
                   collection schemes.
                 </p>
                 <p className="leading-relaxed mb-4">
                   As an individual developer, I believe in creating software
-                  that respects user privacy and works exactly as advertised. QR
-                  Engine reflects my personal commitment to privacy-first
+                  that respects user privacy and works exactly as advertised. X
+                  Bot Cleaner reflects my personal commitment to privacy-first
                   software development.
                 </p>
                 <p className="leading-relaxed">
-                  If you have any questions about this privacy policy or how QR
-                  Engine works, you can contact me directly through the App
-                  Store or via social media.
+                  If you have any questions about this privacy policy or how X
+                  Bot Cleaner works, you can contact me directly through the Chrome
+                  Web Store or via social media.
                 </p>
               </div>
             </motion.section>
@@ -231,34 +242,36 @@ export default function PrivacyPolicy() {
               <div className="space-y-4">
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2">
-                    🛠️ Native iOS Technologies
+                    🛠️ Chrome Extension Technologies
                   </h3>
                   <ul className="space-y-2 text-muted-foreground">
                     <li>
-                      • <strong>AVFoundation:</strong> For camera-based QR code
-                      scanning
+                      • <strong>Chrome Extension APIs:</strong> For interacting with
+                      X/Twitter&apos;s interface
                     </li>
                     <li>
-                      • <strong>CoreImage:</strong> For high-quality QR code
-                      generation
+                      • <strong>Content Scripts:</strong> For capturing follower
+                      profiles and automating actions
                     </li>
                     <li>
-                      • <strong>SwiftUI:</strong> For the user interface
+                      • <strong>Chrome Storage API:</strong> For local data storage
+                      and optional sync
                     </li>
                     <li>
-                      • <strong>Contacts Framework:</strong> For contact card
-                      integration (when permitted)
+                      • <strong>Manifest V3:</strong> Modern Chrome extension
+                      architecture for security and performance
                     </li>
                   </ul>
                 </div>
                 <div className="bg-card border border-border rounded-lg p-6">
                   <h3 className="text-lg font-semibold mb-2">
-                    🌐 No Network Requirements
+                    🌐 No External Servers
                   </h3>
                   <p className="text-muted-foreground">
-                    QR Engine can function completely offline. The app
-                    doesn&apos;t make any network requests for its core
-                    functionality.
+                    X Bot Cleaner doesn&apos;t communicate with any external servers
+                    for processing your data. All operations happen locally in your
+                    browser. The extension only interacts with X/Twitter&apos;s
+                    public interface, just like you would manually.
                   </p>
                 </div>
               </div>
@@ -270,16 +283,16 @@ export default function PrivacyPolicy() {
               </h2>
               <div className="bg-card border border-border rounded-lg p-6">
                 <p className="leading-relaxed mb-4">
-                  Given that QR Engine doesn&apos;t collect any data,
+                  Given that X Bot Cleaner doesn&apos;t collect any data,
                   there&apos;s very little that could change about this privacy
-                  policy. However, if significant changes are made to the app
+                  policy. However, if significant changes are made to the extension
                   that would affect your privacy, this policy will be updated
                   accordingly.
                 </p>
                 <p className="leading-relaxed">
                   Any updates will be reflected on this page and in the
-                  app&apos;s App Store listing. The app will never start
-                  collecting data without explicit user consent and clear
+                  extension&apos;s Chrome Web Store listing. The extension will
+                  never start collecting data without explicit user consent and clear
                   notification.
                 </p>
               </div>
@@ -289,17 +302,17 @@ export default function PrivacyPolicy() {
               <h2 className="text-3xl font-bold mb-6">Questions?</h2>
               <div className="bg-card border border-border rounded-lg p-6">
                 <p className="leading-relaxed mb-4">
-                  If you have any questions about this privacy policy or QR
-                  Engine&apos;s privacy practices, please don&apos;t hesitate to
+                  If you have any questions about this privacy policy or X
+                  Bot Cleaner&apos;s privacy practices, please don&apos;t hesitate to
                   reach out.
                 </p>
                 <p className="text-muted-foreground">
                   <strong>Developer:</strong> Ibrahim Uzun
                   <br />
-                  <strong>Contact:</strong> Available through App Store reviews
+                  <strong>Contact:</strong> Available through Chrome Web Store reviews
                   or social media
                   <br />
-                  <strong>Last Updated:</strong> August 2025
+                  <strong>Last Updated:</strong> January 2025
                 </p>
               </div>
             </motion.section>

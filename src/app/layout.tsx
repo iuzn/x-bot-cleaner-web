@@ -7,31 +7,31 @@ import { FirebaseProvider } from "@/components/firebase-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "QR Engine - Professional QR Scanner & Generator for iOS",
+  title: "X Bot Cleaner - Manual Bot Follower Removal Tool for X (Twitter)",
   description:
-    "Transform your iPhone into a powerful QR code tool. Privacy-first, lightning-fast, and beautifully designed for the modern iOS experience. Download now on the App Store.",
+    "Manually identify and bulk remove bot followers from your X (Twitter) account while preserving legitimate followers. Privacy-first Chrome extension with local processing.",
   keywords: [
-    "QR scanner",
-    "QR generator",
-    "iOS app",
-    "iPhone QR scanner",
-    "privacy-first QR",
-    "professional QR codes",
-    "QR code reader",
-    "instant QR detection",
-    "offline QR scanner",
-    "QR code generator iOS",
-    "real-time QR scanning",
-    "contact QR codes",
-    "URL QR codes",
-    "text QR codes",
-    "App Store QR app",
+    "X bot cleaner",
+    "Twitter bot remover",
+    "bot follower removal",
+    "Chrome extension",
+    "X bot removal",
+    "Twitter bot cleaner",
+    "follower management",
+    "bot detection",
+    "manual bot classification",
+    "bulk unfollow",
+    "privacy-first extension",
+    "local processing",
+    "bot follower tool",
+    "X follower cleanup",
+    "Twitter follower tool",
   ],
   authors: [{ name: "Ibrahim Uzun", url: "https://x.com/ibrahimuzn" }],
   creator: "Ibrahim Uzun",
   publisher: "Ibrahim Uzun",
-  category: "Utilities",
-  classification: "Mobile App",
+  category: "Productivity",
+  classification: "Browser Extension",
   robots: {
     index: true,
     follow: true,
@@ -44,48 +44,48 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://qr-engine.ibrahimuzun.com",
+    canonical: "https://x-bot-cleaner.ibrahimuzun.com",
   },
   openGraph: {
-    title: "QR Engine - Professional QR Scanner & Generator for iOS",
+    title: "X Bot Cleaner - Manual Bot Follower Removal Tool for X (Twitter)",
     description:
-      "Privacy-first QR scanning and generation for iOS users. Transform your iPhone into a powerful QR code tool with instant detection and real-time scanning.",
+      "Manually identify and bulk remove bot followers from your X (Twitter) account while preserving legitimate followers. Privacy-first Chrome extension.",
     type: "website",
-    url: "https://qr-engine.ibrahimuzun.com",
-    siteName: "QR Engine",
+    url: "https://x-bot-cleaner.ibrahimuzun.com",
+    siteName: "X Bot Cleaner",
     locale: "en_US",
     images: [
       {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "QR Engine - Professional QR Scanner & Generator for iOS",
+        alt: "X Bot Cleaner - Manual Bot Follower Removal Tool for X (Twitter)",
         type: "image/png",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "QR Engine - Professional QR Scanner & Generator for iOS",
+    title: "X Bot Cleaner - Manual Bot Follower Removal Tool for X (Twitter)",
     description:
-      "Privacy-first QR scanning and generation for iOS users. Transform your iPhone into a powerful QR code tool.",
+      "Manually identify and bulk remove bot followers from your X (Twitter) account while preserving legitimate followers.",
     creator: "@ibrahimuzn",
     site: "@ibrahimuzn",
     images: ["/images/logo.png"],
   },
   appleWebApp: {
     capable: true,
-    title: "QR Engine",
+    title: "X Bot Cleaner",
     statusBarStyle: "default",
   },
-  applicationName: "QR Engine",
+  applicationName: "X Bot Cleaner",
   referrer: "origin-when-cross-origin",
   formatDetection: {
     email: false,
     address: false,
     telephone: false,
   },
-  metadataBase: new URL("https://qr-engine.ibrahimuzun.com"),
+  metadataBase: new URL("https://x-bot-cleaner.ibrahimuzun.com"),
   verification: {
     google: "your-google-verification-code", // Replace with actual code
     // yandex: "your-yandex-verification-code",
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     "mobile-web-app-capable": "yes",
     "apple-mobile-web-app-capable": "yes",
     "apple-mobile-web-app-status-bar-style": "default",
-    "apple-mobile-web-app-title": "QR Engine",
+    "apple-mobile-web-app-title": "X Bot Cleaner",
     "theme-color": "#000000",
     "color-scheme": "light dark",
     "apple-touch-icon": "/apple-touch-icon.png",
@@ -112,19 +112,19 @@ export default function RootLayout({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    name: "QR Engine",
+    name: "X Bot Cleaner",
     description:
-      "Professional QR scanner and generator for iOS. Privacy-first, lightning-fast QR code tool with instant detection and real-time scanning.",
-    url: "https://qr-engine.ibrahimuzun.com",
-    applicationCategory: "UtilitiesApplication",
-    operatingSystem: "iOS",
+      "Manually identify and bulk remove bot followers from your X (Twitter) account while preserving legitimate followers. Privacy-first Chrome extension with local processing.",
+    url: "https://x-bot-cleaner.ibrahimuzun.com",
+    applicationCategory: "BrowserExtension",
+    operatingSystem: "Chrome",
     offers: {
       "@type": "Offer",
       price: "0",
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
-    downloadUrl: "https://apps.apple.com/us/app/qr-engine/id6748863405",
+    downloadUrl: "https://chrome.google.com/webstore",
     author: {
       "@type": "Person",
       name: "Ibrahim Uzun",
@@ -134,22 +134,15 @@ export default function RootLayout({
       "@type": "Person",
       name: "Ibrahim Uzun",
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "5.0",
-      ratingCount: "1",
-      bestRating: "5",
-      worstRating: "1",
-    },
     featureList: [
-      "Instant QR code detection",
-      "Real-time scanning",
-      "QR code generation",
+      "Manual bot classification",
+      "Follower capture",
+      "Swipe-based review",
+      "Bulk removal",
+      "Smart filters",
+      "Live metrics",
       "Privacy-first approach",
-      "Offline functionality",
-      "Contact QR codes",
-      "URL QR codes",
-      "Text QR codes",
+      "Local processing",
     ],
   };
 
@@ -160,7 +153,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <link rel="canonical" href="https://qr-engine.ibrahimuzun.com" />
+        <link rel="canonical" href="https://x-bot-cleaner.ibrahimuzun.com" />
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
@@ -188,7 +181,7 @@ export default function RootLayout({
         <meta name="msapplication-TileColor" content="#000000" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <meta name="apple-mobile-web-app-title" content="QR Engine" />
+        <meta name="apple-mobile-web-app-title" content="X Bot Cleaner" />
         <meta name="mobile-web-app-capable" content="yes" />
       </head>
       <body className={inter.className}>

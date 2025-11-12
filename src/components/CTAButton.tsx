@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { AppStore } from "@/components/AppStore";
+import { ChromeWebStore } from "@/components/ChromeWebStore";
 import { getAnalytics, logEvent } from "firebase/analytics";
 import { app } from "@/lib/firebase";
 
@@ -11,12 +11,12 @@ interface CTAButtonProps {
   size?: "small" | "medium" | "large";
 }
 
-const handleAppStoreClick = () => {
+const handleChromeWebStoreClick = () => {
   if (typeof window !== "undefined") {
     try {
       const analytics = getAnalytics(app);
       logEvent(analytics, "cta_click", {
-        button_type: "app_store_download",
+        button_type: "chrome_web_store_download",
         source: "landing_page",
         timestamp: new Date().toISOString(),
       });
@@ -25,12 +25,6 @@ const handleAppStoreClick = () => {
     }
   }
 };
-
-interface CTAButtonProps {
-  className?: string;
-  showText?: boolean;
-  size?: "small" | "medium" | "large";
-}
 
 export const CTAButton = ({
   className = "",
@@ -63,26 +57,26 @@ export const CTAButton = ({
             className="text-2xl md:text-3xl font-bold mb-4"
             variants={fadeInUp}
           >
-            Download QR Engine Today
+            Get X Bot Cleaner Today
           </motion.h2>
           <motion.p
             className="text-lg text-muted-foreground mb-8"
             variants={fadeInUp}
           >
-            Experience the future of QR code scanning on your iPhone
+            Take control of your X (Twitter) follower list
           </motion.p>
         </>
       )}
       <motion.div className="flex justify-center" variants={fadeInUp}>
         <a
-          href="https://apps.apple.com/us/app/qr-engine/id6748863405"
+          href="https://chrome.google.com/webstore"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block transition-transform hover:scale-105 active:scale-95 scale-[0.75] sm:scale-100"
-          aria-label="Download QR Engine on the App Store"
-          onClick={handleAppStoreClick}
+          aria-label="Add X Bot Cleaner to Chrome"
+          onClick={handleChromeWebStoreClick}
         >
-          <AppStore />
+          <ChromeWebStore />
         </a>
       </motion.div>
     </motion.div>
