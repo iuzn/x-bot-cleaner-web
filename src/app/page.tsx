@@ -13,7 +13,6 @@ import {
   Trash2,
   Filter,
   BarChart,
-  Users,
   CheckCircle,
   XCircle,
 } from "lucide-react";
@@ -147,9 +146,9 @@ export default function Home() {
                   </h3>
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Manually mark followers as "Real" or "Bot" with dedicated
-                  buttons. Visual color coding helps you quickly identify and
-                  organize your follower list.
+                  Manually mark followers as &quot;Real&quot; or &quot;Bot&quot;
+                  with dedicated buttons. Visual color coding helps you quickly
+                  identify and organize your follower list.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
@@ -259,8 +258,9 @@ export default function Home() {
                 </header>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Review captured followers with an intuitive swipe interface.
-                  Swipe right for "Real", swipe left for "Bot". Process
-                  followers in batches for efficient review.
+                  Swipe right for &quot;Real&quot;, swipe left for
+                  &quot;Bot&quot;. Process followers in batches for efficient
+                  review.
                 </p>
                 <ul className="flex flex-wrap gap-4 text-sm text-muted-foreground">
                   <li className="flex items-center gap-2">
@@ -496,10 +496,10 @@ export default function Home() {
               © 2025 X Bot Cleaner. All rights reserved.
             </p>
             <p className="text-xs text-muted-foreground mt-2">
-              This extension automates interactions with X/Twitter's interface.
-              Use responsibly and in accordance with X/Twitter's Terms of
-              Service. Always review accounts before marking them as bots. Bulk
-              removal operations cannot be undone.
+              This extension automates interactions with X/Twitter&apos;s
+              interface. Use responsibly and in accordance with X/Twitter&apos;s
+              Terms of Service. Always review accounts before marking them as
+              bots. Bulk removal operations cannot be undone.
             </p>
           </div>
         </div>
