@@ -132,10 +132,10 @@ export default function Home() {
 
             {/* First Image - Manual Bot Classification */}
             <motion.article
-              className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6">
+              <div className="flex-1 space-y-6 max-w-3xl">
                 <header className="flex items-center gap-3">
                   <Target
                     className="w-8 h-8 text-blue-500"
@@ -174,24 +174,14 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-1 max-w-md">
-                <Image
-                  src="/images/1.png"
-                  alt="Manual Bot Classification Interface showing Real and Bot buttons with color coding"
-                  width={400}
-                  height={800}
-                  className="rounded-3xl"
-                  priority
-                />
-              </div>
             </motion.article>
 
             {/* Second Image - Follower Capture */}
             <motion.article
-              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6">
+              <div className="flex-1 space-y-6 max-w-3xl">
                 <header className="flex items-center gap-3">
                   <Download
                     className="w-8 h-8 text-purple-500"
@@ -230,23 +220,14 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-1 max-w-md">
-                <Image
-                  src="/images/2.png"
-                  alt="Follower Capture Interface showing automatic follower profile capture and storage"
-                  width={400}
-                  height={800}
-                  className="rounded-3xl"
-                />
-              </div>
             </motion.article>
 
             {/* Third Image - Swipe-Based Review */}
             <motion.article
-              className="flex flex-col lg:flex-row-reverse items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6">
+              <div className="flex-1 space-y-6 max-w-3xl">
                 <header className="flex items-center gap-3">
                   <MoveHorizontal
                     className="w-8 h-8 text-green-500"
@@ -286,23 +267,14 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
-              <div className="flex-1 max-w-md">
-                <Image
-                  src="/images/3.png"
-                  alt="Swipe-Based Review Interface showing intuitive swipe gestures for classifying followers"
-                  width={400}
-                  height={800}
-                  className="rounded-3xl"
-                />
-              </div>
             </motion.article>
 
             {/* Fourth Image - Bulk Removal & Smart Filters */}
             <motion.article
-              className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6">
+              <div className="flex-1 space-y-6 max-w-3xl">
                 <header className="flex items-center gap-3">
                   <Trash2
                     className="w-8 h-8 text-orange-500"
@@ -341,15 +313,6 @@ export default function Home() {
                     Rate limit protection
                   </li>
                 </ul>
-              </div>
-              <div className="flex-1 max-w-md">
-                <Image
-                  src="/images/4.png"
-                  alt="Bulk Removal Interface showing smart filters and progress tracking for removing bot followers"
-                  width={400}
-                  height={800}
-                  className="rounded-3xl"
-                />
               </div>
             </motion.article>
           </motion.div>
