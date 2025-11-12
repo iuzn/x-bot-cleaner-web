@@ -130,7 +130,24 @@ export default function Home() {
               X Bot Cleaner Features
             </h2>
 
-            {/* First Image - Manual Bot Classification */}
+            {/* App Overview - First Image */}
+            <motion.article
+              className="flex flex-col items-center gap-8 lg:gap-12"
+              variants={fadeInUp}
+            >
+              <div className="w-full max-w-5xl">
+                <Image
+                  src="/images/1.jpg"
+                  alt="X Bot Cleaner App Overview - General application interface"
+                  width={1200}
+                  height={675}
+                  className="rounded-3xl w-full h-auto shadow-2xl"
+                  priority
+                />
+              </div>
+            </motion.article>
+
+            {/* Manual Bot Classification */}
             <motion.article
               className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
@@ -176,7 +193,7 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Second Image - Follower Capture */}
+            {/* Follower Capture */}
             <motion.article
               className="flex flex-col items-center gap-8 lg:gap-16"
               variants={fadeInUp}
@@ -222,12 +239,21 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Third Image - Swipe-Based Review */}
+            {/* Swipe-Based Review - Second Image */}
             <motion.article
-              className="flex flex-col items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-12"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6 max-w-3xl">
+              <div className="w-full max-w-5xl mb-6">
+                <Image
+                  src="/images/2.jpg"
+                  alt="Swipe-Based Review Interface showing intuitive swipe gestures for classifying followers"
+                  width={1200}
+                  height={675}
+                  className="rounded-3xl w-full h-auto shadow-2xl"
+                />
+              </div>
+              <div className="flex-1 space-y-6 max-w-3xl w-full">
                 <header className="flex items-center gap-3">
                   <MoveHorizontal
                     className="w-8 h-8 text-green-500"
@@ -269,12 +295,21 @@ export default function Home() {
               </div>
             </motion.article>
 
-            {/* Fourth Image - Bulk Removal & Smart Filters */}
+            {/* Bulk Removal & Smart Filters - Third Image */}
             <motion.article
-              className="flex flex-col items-center gap-8 lg:gap-16"
+              className="flex flex-col items-center gap-8 lg:gap-12"
               variants={fadeInUp}
             >
-              <div className="flex-1 space-y-6 max-w-3xl">
+              <div className="w-full max-w-5xl mb-6">
+                <Image
+                  src="/images/3.jpg"
+                  alt="Bulk Removal Interface showing metrics, smart filters and progress tracking for removing bot followers"
+                  width={1200}
+                  height={675}
+                  className="rounded-3xl w-full h-auto shadow-2xl"
+                />
+              </div>
+              <div className="flex-1 space-y-6 max-w-3xl w-full">
                 <header className="flex items-center gap-3">
                   <Trash2
                     className="w-8 h-8 text-orange-500"
