@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { FirebaseProvider } from "@/components/firebase-provider";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -195,6 +196,7 @@ export default function RootLayout({
             {children}
           </ThemeProvider>
         </FirebaseProvider>
+        <Analytics />
       </body>
     </html>
   );
